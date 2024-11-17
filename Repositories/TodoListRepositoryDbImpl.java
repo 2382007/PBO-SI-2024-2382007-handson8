@@ -20,7 +20,7 @@ public class TodoListRepositoryDbImpl implements TodoListRepository {
     @Override
     public TodoList[] getAll() {
         Connection connection = database.getConnection();
-        String sqlStatement = "SELECT * FROM todo";
+        String sqlStatement = "SELECT * FROM todos";
         List<TodoList> todoLists = new ArrayList<>();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sqlStatement);
